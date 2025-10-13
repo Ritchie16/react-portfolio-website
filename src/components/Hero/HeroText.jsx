@@ -54,7 +54,7 @@ const HeroText = () => {
         <a
           href="#contact"
           /**items center for centering vertically and justify-center for centering items horizontally */
-          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes}  bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105`}
+          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes}  bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
         >
           <FiArrowRight />
           Get In Touch
@@ -62,7 +62,7 @@ const HeroText = () => {
 
         <a
           href="#projects"
-          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-primary-600 hover:text-primary-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-transform duration-300 hover:scale-105`}
+          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-primary-600 hover:text-primary-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105`}
         >
           <FiArrowRight />
           See My Projects
@@ -71,7 +71,7 @@ const HeroText = () => {
         <a
           href="/Richard_Munthali_CV.pdf"
           download
-          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-3  rounded-lg font-semibold flex items-center justify-center gap-2 transition-transform duration-300 hover:scale-105`}
+          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-3  rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105`}
         >
           <FiDownload />
           Download CV
