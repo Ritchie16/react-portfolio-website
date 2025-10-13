@@ -106,7 +106,7 @@ const Header = () => {
           <motion.a
             href="#home"
             onClick={(e) => handleSmoothScroll("#home", e)}
-            className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-blue-300 dark:from-primary-500 dark:to-blue-300 bg-clip-text text-transparent cursor-pointer"
+            className="w-20 md:w-30 text-center text-lg md:text-2xl font-bold bg-gradient-to-r from-primary-600 to-blue-300 dark:from-primary-500 dark:to-blue-300 bg-clip-text text-transparent cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
