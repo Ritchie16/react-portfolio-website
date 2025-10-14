@@ -17,6 +17,13 @@ const Hero = () => {
       id="home"
       className=" min-h-screen flex items-center justify-center  bg-gradient-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900/60"
     >
+      {/** Using motion.div to animate the entire hero section */}
+      {/** Applying container variants for staggered child animations */}
+      {/** Flexbox layout to arrange text and image side by side on large screens and stacked on smaller screens */}
+      {/** Gap between items for spacing */}
+      {/** Padding for overall spacing */}
+      {/** Responsive design with flex-col on small screens and flex-row on large screens */}
+      {/** Centering items vertically and horizontally */}  
       <motion.div
         variants={containerVariants}
         initial="hidden"
