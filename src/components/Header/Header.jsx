@@ -1,6 +1,6 @@
 // src/components/Header/Header.jsx
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import ThemeToggleButton from "../ThemeToggle/ThemeToggle";
 
 const Header = () => {
@@ -66,6 +66,7 @@ const Header = () => {
   const navItems = [
     { name: "Home", href: "#home", id: "home" },
     { name: "About", href: "#about", id: "about" },
+    { name: "Services", href: "#services", id: "services" },
     { name: "Skills", href: "#skills", id: "skills" },
     { name: "Projects", href: "#projects", id: "projects" },
     { name: "Contact", href: "#contact", id: "contact" },
@@ -90,7 +91,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <motion.header
+    <Motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -103,7 +104,7 @@ const Header = () => {
       <nav className="px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between py-4 min-h-10 md:min-h-12 lg:min-h-14">
           {/* Logo/Brand */}
-          <motion.a
+          <Motion.a
             href="#home"
             onClick={(e) => handleSmoothScroll("#home", e)}
             className="w-20 md:w-30 text-center text-lg md:text-2xl font-bold bg-gradient-to-r from-primary-600 to-blue-300 dark:from-primary-500 dark:to-blue-300 bg-clip-text text-transparent cursor-pointer"
@@ -111,12 +112,12 @@ const Header = () => {
             whileTap={{ scale: 0.95 }}
           >
             RITCHIE
-          </motion.a>
+          </Motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden xl:flex items-center gap-10">
-            {navItems.map((item, index) => (
-              <motion.a
+            {navItems.map((item) => (
+              <Motion.a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
@@ -139,23 +140,23 @@ const Header = () => {
                       : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 ></span>
-              </motion.a>
+              </Motion.a>
             ))}
 
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 }}
               className="ml-4 w-12 pr-5"
             >
               <ThemeToggleButton />
-            </motion.div>
+            </Motion.div>
           </div>
 
           {/* Large Tablet Navigation */}
           <div className="hidden lg:flex xl:hidden items-center gap-6">
             {navItems.map((item) => (
-              <motion.a
+              <Motion.a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
@@ -175,22 +176,22 @@ const Header = () => {
                       : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 ></span>
-              </motion.a>
+              </Motion.a>
             ))}
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
               className="ml-2 w-12 pr-5"
             >
               <ThemeToggleButton />
-            </motion.div>
+            </Motion.div>
           </div>
 
           {/* Small Tablet Navigation */}
           <div className="hidden md:flex lg:hidden items-center gap-4">
             {navItems.map((item) => (
-              <motion.a
+              <Motion.a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
@@ -203,22 +204,22 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 {item.name}
-              </motion.a>
+              </Motion.a>
             ))}
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
               className="ml-2 w-12 pr-5"
             >
               <ThemeToggleButton />
-            </motion.div>
+            </Motion.div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center justify-between gap-x-3 w-15">
             <ThemeToggleButton />
-            <motion.button
+            <Motion.button
               onClick={(e) => {
                 e.stopPropagation();
                 setIsMenuOpen(!isMenuOpen);
@@ -250,7 +251,7 @@ const Header = () => {
                   />
                 )}
               </svg>
-            </motion.button>
+            </Motion.button>
 
             <div className="w-7">
               {/* This empty div is to help with spacing and alignment of the menu button */}
@@ -264,7 +265,7 @@ const Header = () => {
          */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -273,7 +274,7 @@ const Header = () => {
             >
               <div className="py-3 space-y-1">
                 {navItems.map((item, index) => (
-                  <motion.a
+                  <Motion.a
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
@@ -288,14 +289,14 @@ const Header = () => {
                     whileHover={{ x: 8 }}
                   >
                     {item.name}
-                  </motion.a>
+                  </Motion.a>
                 ))}
               </div>
-            </motion.div>
+            </Motion.div>
           )}
         </AnimatePresence>
       </nav>
-    </motion.header>
+    </Motion.header>
   );
 };
 
