@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { FiArrowRight, FiDownload, FiCopy, FiCheck } from "react-icons/fi";
 import HeroSocialLinks from "./HeroSocialLinks";
 
 const HeroText = () => {
-  
   const buttonSizes = "text-sm md:text-md ";
 
   //this is similar to as writing initial and animate props on motion.div
@@ -22,32 +20,41 @@ const HeroText = () => {
   };
 
   return (
-    <motion.div
+    <Motion.div
       variants={itemVariants}
       className=" lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start gap-6 "
     >
       {/** heading with gradient text on name */}
-      <motion.h1 className=" text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-        Hi, I'm{" "}
+      <Motion.h1 className=" text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+        Hi     
+        , I'm{" "}
         <span className="bg-gradient-to-r from-primary-600 to-blue-400 dark:from-primary-700 dark:via-indigo-300 dark:to-blue-400 bg-clip-text text-transparent">
           Richard Munthali
         </span>
-      </motion.h1>
-
+        
+        <span
+          className=" animate-wave inline-block"
+          style={{ transformOrigin: "70% 70%" }}
+          aria-label="Waving hand emoji"
+          role="img"
+        >
+          👋
+        </span>
+      </Motion.h1>
 
       {/**subheading with highlighted text  */}
-      <motion.p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
+      <Motion.p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
         Full Stack Developer &{" "}
         <span className="text-primary-600 dark:text-primary-400">
           UI/UX Enthusiast
         </span>
-      </motion.p>
+      </Motion.p>
 
-      <motion.p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
+      <Motion.p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
         I create beautiful, responsive web applications using modern
         technologies. Passionate about clean code, user experience, and turning
         complex problems into simple, elegant solutions.
-      </motion.p>
+      </Motion.p>
 
       {/* === CTA Buttons === */}
       <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
@@ -77,9 +84,7 @@ const HeroText = () => {
           Download CV
         </a>
       </div>
-
-
-    </motion.div>
+    </Motion.div>
   );
 };
 

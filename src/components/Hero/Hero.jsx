@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import HeroText from "./HeroText";
 import HeroImage from "./HeroImage";
 
@@ -15,6 +15,7 @@ const Hero = () => {
   return (
     <section
       id="home"
+     
       className=" min-h-screen flex items-center justify-center  bg-gradient-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900/60"
     >
       {/** Using motion.div to animate the entire hero section */}
@@ -24,7 +25,7 @@ const Hero = () => {
       {/** Padding for overall spacing */}
       {/** Responsive design with flex-col on small screens and flex-row on large screens */}
       {/** Centering items vertically and horizontally */}  
-      <motion.div
+      <Motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -39,7 +40,7 @@ const Hero = () => {
 
         {/**image with social links */}
         <HeroImage />
-      </motion.div>
+      </Motion.div>
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaWhatsappSquare, FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -18,21 +18,23 @@ const HeroSocialLinks = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center gap-x-4 h-22">
-      {links.map((link, index) => (
-        <motion.a
+    <div className="flex items-center justify-center gap-x-4 h-20">
+      {links.map((link) => (
+        <Motion.a
           key={link.label}
           href={link.href}
           aria-label={link.label}
-          className="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 p-3 hover:bg-white dark:hover:bg-gray-800 rounded-xl hover:shadow-lg"
-          whileHover={{ scale: 1.1, y: -2 }}
+          className="h-10 w-10 bg-blue-900/80 group-hover:bg-gray-200 dark:bg-blue-900/80 flex items-center justify-center transition-colors duration-300 rounded-full hover:shadow-lg group"
+          whileHover={{ scale: 1, y: -2 }}
           whileTap={{ scale: 0.9 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 + index * 0.1 }}
+          transition={{ duration: 0.4 }}
         >
-          <link.icon size={24} />
-        </motion.a>
+         
+           <link.icon size={25} className="text-white/95 dark:text-white/95 group-hover:text-primary-200 dark:group-hover:text-primary-200" />
+        
+        </Motion.a>
       ))}
     </div>
   );
