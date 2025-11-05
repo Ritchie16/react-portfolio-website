@@ -1,6 +1,6 @@
 import AboutMyStack from "./AboutMyStack";
-import AboutPassion from "./AboutPassion";
-import { motion } from "framer-motion";
+// import AboutPassion from "./AboutPassion";
+import { motion as Motion } from "framer-motion";
 
 const PassionAndStack = () => {
     const containerVariants = {
@@ -12,15 +12,15 @@ const PassionAndStack = () => {
   };
 
   return (
-    <motion.div
+    <Motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col w-full md:max-w-1/2 items-center justify-between gap-y-2 md:gap-x-5"
+            className="flex flex-col w-full md:max-w-1/2 items-center justify-between gap-y-5 md:gap-x-5"
           >
-            <AboutPassion />
+            {/* <AboutPassion /> */}
             <AboutMyStack />
-          </motion.div>
+          </Motion.div>
 
   );
 

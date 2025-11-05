@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 import { GrCertificate } from "react-icons/gr";
 
@@ -12,7 +12,7 @@ const AboutCertification = () => {
   ];
 
   return (
-    <div className="h-33 md:h-50 w-[80%] md:w-full   flex flex-col  items-center justify-start  bg-gray-100 dark:bg-gray-800  rounded-xl shadow-md hover:shadow-lg hover:scale-102 transition-transform duration-300">
+    <div className="h-40 md:h-50 w-[90%] md:w-full   flex flex-col  items-center justify-start  bg-gray-100 dark:bg-gray-800  rounded-xl shadow-md hover:shadow-lg hover:scale-102 transition-transform duration-300">
       {/* Certificate Icon at the bottom */}
       <div className="w-full h-6 text-md lg:text-lg xl:text-xl  flex items-center  justify-center gap-2 font-bold text-primary-600 dark:text-white">
         <GrCertificate />
@@ -22,7 +22,7 @@ const AboutCertification = () => {
       {/* Certificate entries */}
       <div className="flex flex-col items-center gap-y-2  w-full  ">
         {certificate.map((cert, index) => (
-          <motion.div
+          <Motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ const AboutCertification = () => {
             <p className="text-gray-500 dark:text-gray-400 mt-1">
               Year: {cert.year}
             </p>
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
     </div>

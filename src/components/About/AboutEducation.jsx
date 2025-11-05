@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa";
 
 const AboutEducation = () => {
@@ -17,7 +17,7 @@ const AboutEducation = () => {
 
   return (
     <>
-      <div className="h-56 md:h-100 w-[80%] md:w-full flex flex-col items-start   bg-gray-100 dark:bg-gray-800  rounded-xl shadow-md hover:shadow-lg hover:scale-102 transition-transform duration-300">
+      <div className="h-70 md:h-100 w-[90%] md:w-full flex flex-col items-start   bg-gray-100 dark:bg-gray-800  rounded-xl shadow-md hover:shadow-lg hover:scale-102 transition-transform duration-300">
         {/*Education and wisdom Heart */}
         <h4 className="w-full h-8 md:h-14 text-md lg:text-lg xl:text-xl flex items-center  justify-center gap-2 font-bold text-primary-600 dark:text-white">
           <span>
@@ -30,7 +30,7 @@ const AboutEducation = () => {
         {/*Education entiries of what am doing/i did and school/year attended */}
         <div className="flex flex-col items-center gap-y-2 md:gap-y-5 h-full w-full    ">
           {education.map((edu, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ const AboutEducation = () => {
               <p className="text-gray-500 dark:text-gray-400 mt-1">
                 Year: {edu.year}
               </p>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
