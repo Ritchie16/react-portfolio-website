@@ -47,29 +47,6 @@ export const services = [
       "Technical Consultation",
     ],
   },
-   {
-    id: "it-support",
-    title: "IT Support & Computer Repair",
-    description:
-      "I provide comprehensive IT support services including laptop repair, PC troubleshooting, and remote software assistance. Whether it's hardware issues, software conflicts, or technical guidance, I offer reliable solutions to keep your devices running smoothly and efficiently.",
-    features: [
-      "Laptop Hardware Repair",
-      "Remote PC Troubleshooting",
-      "Software Installation & Support",
-      "Technical Consultation",
-    ],
-  },
-   {
-    id: "it-support",
-    title: "IT Support & Computer Repair",
-    description:
-      "I provide comprehensive IT support services including laptop repair, PC troubleshooting, and remote software assistance. Whether it's hardware issues, software conflicts, or technical guidance, I offer reliable solutions to keep your devices running smoothly and efficiently.",
-    features: [
-      "Laptop Hardware Repair",
-      "Remote PC Troubleshooting",
-      "Software Installation & Support",
-      "Technical Consultation",
-    ],
-  },
+   
   
 ];
