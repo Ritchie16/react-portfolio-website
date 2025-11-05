@@ -13,6 +13,43 @@
   --color-primary-700: #1d4ed8;
   --color-primary-800: #1e40af;
   --color-primary-900: #1e3a8a;
+
+  --animate-wave: wave 2s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Define your hero background class OUTSIDE of @theme block */
+.hero-bg-img {
+  background-image: url("/bg2.jpeg"); /* Note: path should be from public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 * {
@@ -26,7 +63,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   transition: all 0.3s ease;
 }
 
