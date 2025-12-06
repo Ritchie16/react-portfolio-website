@@ -14,7 +14,7 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Update active section based on scroll position
-      const sections = ["home", "about", "skills", "projects", "contact"];
+      const sections = ["home", "about", "services",  "skills", "projects", "contact"];
 
       // Find the section currently in view so that we can highlight it in the nav
       //.find used to search through an array and return the first element that matches a condition you define.

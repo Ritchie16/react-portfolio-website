@@ -18,7 +18,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="flex flex-col  gap-y-6 bg-gray-50 dark:bg-gray-900 min-h-screen w-full  "
+      className="mb-10! flex flex-col  gap-y-6 bg-gray-50 dark:bg-gray-900 min-h-screen w-full  "
     >
       {/* Section Header */}
       <Motion.div
@@ -51,4 +51,4 @@ const Services = () => {
   );
 };
 
-export { Services };
+export default Services;
