@@ -20,6 +20,35 @@
   --color-accent-600: #008b71;
   --color-accent-700: #00715c;
 
+  /* Dark Theme - WhatsApp Pro Dark */
+  --color-dark-50: #0a0f12; /* Deepest background */
+  --color-dark-100: #0d1418; /* App background */
+  --color-dark-200: #111a1f; /* Surface */
+  --color-dark-300: #152025; /* Elevated surface */
+  --color-dark-400: #1a262c; /* Cards */
+  --color-dark-500: #1f2c33; /* Inputs, menus */
+  --color-dark-600: #24333a; /* Hover states */
+  --color-dark-700: #293a42; /* Active states */
+  --color-dark-800: #2e414a; /* Borders */
+  --color-dark-900: #334851; /* High contrast */
+
+  /* Dark Text Scale */
+  --color-dark-text-50: #ffffff;
+  --color-dark-text-100: #f8faf9;
+  --color-dark-text-200: #f0f4f2;
+  --color-dark-text-300: #e8edeb;
+  --color-dark-text-400: #d8e0dc;
+  --color-dark-text-500: #c8d3cd;
+  --color-dark-text-600: #b4beb9;
+  --color-dark-text-700: #a0aca6;
+  --color-dark-text-800: #8c9992;
+  --color-dark-text-900: #78867f;
+
+  /* Special Dark Mode Colors */
+  --color-dark-accent: #00a884; /* Your accent green */
+  --color-dark-accent-hover: #00b894; /* Brighter for hover */
+  --color-dark-accent-active: #009174; /* Darker for active */
+
   --animate-wave: wave 2s infinite;
 }
 
