@@ -42,7 +42,7 @@ const Projects = () => {
 //   };
 
   return (
-    <section id="projects" className="relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden">
+    <section id="projects" className="relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden bg-gradient-to-b from-gray-50 to-gray-200   dark:from-dark-200 dark:to-dark-100">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-transparent dark:from-gray-900/30 -z-10"></div>
       
@@ -62,7 +62,7 @@ const Projects = () => {
           
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4!">
-            My <span className="bg-gradient-to-r from-primary-600 to-blue-500 bg-clip-text text-transparent">Projects</span>
+            My <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">Projects</span>
           </h2>
           
           
@@ -105,7 +105,7 @@ const Projects = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`px-5! py-2.5! rounded-full text-sm font-medium capitalize transition-all duration-300 ${
                   filter === category
-                    ? 'bg-gradient-to-r from-primary-600 to-blue-500 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-primary-600 to-primary-400 text-white shadow-lg'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-sm'
                 }`}
               >

@@ -1,12 +1,17 @@
 // src/components/Projects/ProjectCard.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { motion as Motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaLock, FaEye, FaCode } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaLock, FaEye, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const ProjectCard = ({ project, index }) => {
   const isPrivate = !project.is_public;
   const hasLiveDemo = project.live_demo !== null;
   const hasGithub = project.github_url !== null;
+  const [showAllTools, setShowAllTools] = useState(false);
+  
+  // Determine if we have too many tools to show comfortably
+  const hasManyTools = project.tools.length > 5;
+  const displayedTools = showAllTools ? project.tools : project.tools.slice(0, 5);
 
   return (
     <Motion.div
@@ -18,10 +23,10 @@ const ProjectCard = ({ project, index }) => {
       className="group relative h-full"
     >
       {/* Card Container */}
-      <div className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700/50 group-hover:border-primary-300 dark:group-hover:border-primary-500">
+      <div className="h-full bg-white/80 dark:bg-dark-500 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-1 border-gray-100 dark:border-white/20 group-hover:border-primary-300 dark:group-hover:border-primary-500 flex flex-col">
         
         {/* Project Image */}
-        <div className="relative h-48 md:h-56 overflow-hidden">
+        <div className="relative h-48 md:h-56 overflow-hidden flex-shrink-0 bg-dark-text-400">
           <img
             src={project.image}
             alt={project.name}
@@ -61,48 +66,72 @@ const ProjectCard = ({ project, index }) => {
           )}
         </div>
 
-        {/* Card Content */}
-        <div className="p-6!">
+        {/* Card Content - Flex container to push buttons to bottom */}
+        <div className="p-6! flex-1 flex flex-col">
           {/* Project Header */}
           <div className="flex items-start justify-between mb-4!">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2!">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2! ">
                 {project.name}
-                
               </h3>
-              
-              {/* Tools Tags */}
-              <div className="flex flex-wrap gap-2! mb-4!">
-                {project.tools.map((tool, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3! py-1! bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full"
-                  >
-                    {tool}
-                  </span>
-                ))}
-                
-              </div>
             </div>
 
             {/* Public/Private Indicator */}
-            <div className={`flex-shrink-0 px-2! py-1! rounded-2xl ${isPrivate ? " bg-red-100/20 dark:bg-gray-700": " bg-green-100/20 dark:bg-gray-700"} `}>
-              
+            <div className={`flex-shrink-0 px-2! py-1! rounded-2xl ${isPrivate ? "bg-red-100/20 dark:bg-gray-700" : "bg-green-100 dark:bg-gray-700"} ml-2!`}>
               {isPrivate ? (
-                    <p className="text-red-400">Private</p>
-                ) : (
-                    <p className="text-green-400">Public</p>
-                )}
+                <p className="text-red-400 text-sm! font-medium!">Private</p>
+              ) : (
+                <p className="text-green-400 text-sm! font-medium!">Public</p>
+              )}
             </div>
           </div>
 
-          {/* Project Description */}
-          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6! line-clamp-3">
-            {project.description}
-          </p>
+          {/* Tools Tags - With smart collapsing */}
+          <div className="mb-4! flex-shrink-0">
+            <div className="flex flex-wrap gap-2! mb-1!">
+              {displayedTools.map((tool, idx) => (
+                <span
+                  key={idx}
+                  className="px-2! py-1! bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs! font-medium! rounded-full whitespace-nowrap"
+                >
+                  {tool}
+                </span>
+              ))}
+              {hasManyTools && !showAllTools && (
+                <span className="px-2! py-1! text-xs! font-medium! text-gray-500 dark:text-gray-400">
+                  +{project.tools.length - 5}
+                </span>
+              )}
+            </div>
+            
+            {/* Expand/Collapse button for tools */}
+            {hasManyTools && (
+              <button
+                onClick={() => setShowAllTools(!showAllTools)}
+                className="text-xs! text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium! flex items-center gap-1! mt-1!"
+              >
+                {showAllTools ? (
+                  <>
+                    Show less <FaChevronUp size={10} />
+                  </>
+                ) : (
+                  <>
+                    Show all {project.tools.length} tools <FaChevronDown size={10} />
+                  </>
+                )}
+              </button>
+            )}
+          </div>
 
-          {/* Action Buttons */}
-          <div className="flex items-center justify-between pt-4! border-t border-gray-100 dark:border-gray-700/50">
+          {/* Project Description - Flexible space */}
+          <div className="flex-1 min-h-0">
+            <p className="text-gray-600 dark:text-gray-300 text-sm! leading-relaxed mb-4! line-clamp-3">
+              {project.description}
+            </p>
+          </div>
+
+          {/* Action Buttons - Fixed at bottom */}
+          <div className="flex items-center justify-between pt-4! border-t border-gray-100 dark:border-gray-700/50 mt-auto">
             <div className="flex items-center gap-4">
               {/* GitHub Button */}
               {hasGithub ? (
@@ -112,15 +141,15 @@ const ProjectCard = ({ project, index }) => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-4! py-2! bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-300"
+                  className="flex items-center gap-2 px-4! py-2! bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-300 flex-shrink-0"
                 >
                   <FaGithub />
-                  <span className="text-sm font-medium">Code</span>
+                  <span className="text-sm! font-medium!">Code</span>
                 </Motion.a>
               ) : (
-                <div className="flex items-center gap-2 px-4! py-2! bg-red-100/20 dark:bg-gray-700 text-gray-400 dark:text-gray-400 rounded-lg cursor-not-allowed">
+                <div className="flex items-center gap-2 px-4! py-2! bg-red-100/20 dark:bg-gray-700 text-gray-400 dark:text-gray-400 rounded-lg cursor-not-allowed flex-shrink-0">
                   <FaGithub />
-                  <span className="text-sm font-medium ">Private</span>
+                  <span className="text-sm! font-medium!">Private</span>
                 </div>
               )}
 
@@ -132,30 +161,18 @@ const ProjectCard = ({ project, index }) => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-4! py-2! bg-gradient-to-r from-primary-600 to-blue-500 text-white rounded-lg hover:from-primary-700 hover:to-blue-600 transition-all duration-300"
+                  className="flex items-center gap-2 px-4! py-2! bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-lg hover:from-primary-700 hover:to-primary-600 transition-all duration-300 flex-shrink-0"
                 >
                   <FaExternalLinkAlt />
-                  <span className="text-sm font-medium">Live Demo</span>
+                  <span className="text-sm! font-medium!">Live Demo</span>
                 </Motion.a>
               ) : (
-                <div className="flex items-center gap-2 px-4! py-2! bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500 rounded-lg cursor-not-allowed">
+                <div className="flex items-center gap-2 px-4! py-2! bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500 rounded-lg cursor-not-allowed flex-shrink-0">
                   <FaEye />
-                  <span className="text-sm font-medium">No Demo</span>
+                  <span className="text-sm! font-medium!">No Demo</span>
                 </div>
               )}
             </div>
-
-            {/* Project Stats */}
-            {/* <div className="flex items-center gap-3">
-              <div className="text-right">
-                <div className={`text-xs text-gray-500 dark:text-gray-400 ${isPrivate ? 'text-red-400' : 'text-green-500'}`}>
-                  {isPrivate ? 'Private' : 'Public'}
-                </div>
-                <div className="text-sm font-medium text-gray-900 dark:text-white">
-                  Project
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
 
