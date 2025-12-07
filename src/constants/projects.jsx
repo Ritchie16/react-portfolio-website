@@ -5,13 +5,13 @@ const projects = [
     id: 2,
     name: "Portfolio Website",
     description: "A responsive portfolio website showcasing projects and skills with dark/light mode, smooth animations, and optimized performance. Built with React and Framer Motion for engaging user interactions.",
-    image: "/bg2.jpeg",
+    image: "/proj_myportfolio.png",
     tools: ["React", "Framer Motion", "TailwindCSS", "Vite", "React Icons"],
     is_public: true,
     github_url: "https://github.com/Ritchie16/react-portfolio-website",
     live_demo: "https://richardmunthali.vercel.app",
     category: "Frontend",
-    featured: true
+    featured: false
   },
  
  
