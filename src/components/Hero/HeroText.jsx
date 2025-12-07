@@ -28,7 +28,7 @@ const HeroText = () => {
       <Motion.h1 className=" text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
         Hi     
         , I'm{" "}
-        <span className="bg-gradient-to-r from-primary-600 to-blue-400 dark:from-primary-700 dark:via-indigo-300 dark:to-blue-400 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-700 dark:via-primary-300 dark:to-primary-400 bg-clip-text text-transparent">
           Richard Munthali
         </span>
         

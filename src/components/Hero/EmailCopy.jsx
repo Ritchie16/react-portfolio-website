@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion as Motion} from "framer-motion";
 import { FiCopy, FiCheck } from "react-icons/fi";
 
 const EmailCopy = () => {
   const [copied, setCopied] = useState(false);
+
+  const Email = import.meta.env.MY_EMAIL;
 
   const copyEmail = () => {
     //navigator is a web API that provides access to the clipboard
@@ -22,11 +24,11 @@ const EmailCopy = () => {
       >
         {copied ? (
           <>
-            <FiCheck className="text-green-500" /> Copied!
+            <FiCheck className="text-green-500" /> Copied to Clipboard!
           </>
         ) : (
           <>
-            <FiCopy /> richardmunthali016@gmail.com
+            <FiCopy size={18} /> richardmunthali016@gmail.com
           </>
         )}
       </button>

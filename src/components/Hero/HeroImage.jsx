@@ -14,7 +14,7 @@ const HeroImage = () => (
     {/**the relative class plays a role in positioning the floating shapes */}
     <div className="relative">
       {/** Profile image with gradient border*/}
-      <div className="relative w-64 h-64 md:w-70 md:h-70 lg:w-80 lg:h-80 bg-gradient-to-br from-primary-400 via-blue-500 to-purple-700 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl">
+      <div className="relative w-64 h-64 md:w-70 md:h-70 lg:w-80 lg:h-80 bg-gradient-to-br from-primary-400 via-primary-500 to-primary-700 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl">
         {/**profile image that fits the border with it's aspect ratio */}
         <img
           src="/profile_pic.jpeg"

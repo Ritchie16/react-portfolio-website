@@ -16,7 +16,7 @@ const Hero = () => {
     <section
       id="home"
      
-      className=" min-h-screen flex items-center justify-center  bg-gradient-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900/60"
+      className=" min-h-screen flex items-center justify-center  bg-gradient-to-b from-gray-50 to-gray-200   dark:from-dark-200 dark:to-dark-100"
     >
       {/** Using motion.div to animate the entire hero section */}
       {/** Applying container variants for staggered child animations */}
