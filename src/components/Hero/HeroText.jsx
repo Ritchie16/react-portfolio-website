@@ -2,6 +2,7 @@ import { motion as Motion } from "framer-motion";
 import { FiArrowRight, FiDownload, FiCopy, FiCheck } from "react-icons/fi";
 import HeroSocialLinks from "./HeroSocialLinks";
 
+
 const HeroText = () => {
   const buttonSizes = "text-sm md:text-md ";
 
@@ -68,7 +69,7 @@ const HeroText = () => {
         </a>
 
         <a
-          href="#projects "
+          href="#projects"
           className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-primary-600 hover:text-primary-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105`}
         >
           <FiArrowRight />

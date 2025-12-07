@@ -25,19 +25,19 @@ const HeroImage = () => (
 
       {/* Floating shapes that uses absolute with relative div above*/}
       <Motion.div
-        className="absolute -top-2 right-2 w-10 h-10 md:w-15 md:h-15 bg-yellow-400 rounded-full opacity-20"
+        className="absolute -top-2 right-2 w-10 h-10 md:w-15 md:h-15 bg-primary-200 rounded-full opacity-20"
         animate={{ y: [0, -10, 0], rotate: [0, 10, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <Motion.div
-        className="absolute -bottom-4 -left-4 w-8 h-8 md:w-16 md:h-16 bg-purple-400 rounded-full opacity-20"
+        className="absolute -bottom-4 -left-4 w-8 h-8 md:w-16 md:h-16 bg-primary-300 rounded-full opacity-20"
         animate={{ y: [0, 10, 0], rotate: [0, -10, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
 
        <Motion.div
-        className="absolute right-4 bottom-4 w-8 h-8 md:w-10 md:h-10 bg-indigo-700 rounded-full opacity-20"
+        className="absolute right-4 bottom-4 w-8 h-8 md:w-10 md:h-10 bg-gray-400 rounded-full opacity-20"
         animate={{ y: [0, 10, 0], rotate: [0, -20, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
