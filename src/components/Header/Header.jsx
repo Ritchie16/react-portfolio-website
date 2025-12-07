@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import ThemeToggleButton from "../ThemeToggle/ThemeToggle";
+import { LiaLaptopCodeSolid } from "react-icons/lia";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,10 +108,11 @@ const Header = () => {
           <Motion.a
             href="#home"
             onClick={(e) => handleSmoothScroll("#home", e)}
-            className="w-20 md:w-30 text-center text-lg md:text-2xl font-bold bg-gradient-to-r from-primary-600 to-blue-300 dark:from-primary-500 dark:to-blue-300 bg-clip-text text-transparent cursor-pointer"
+            className="flex items-center justify-center gap-x-2 w-20 md:w-40 text-center text-lg md:text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-300 dark:from-primary-500 dark:to-primary-300 bg-clip-text text-transparent cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
+             {/* <LiaLaptopCodeSolid size={30} className=" dark:bg-gray-200/20  text-primary-600 dark:text-white/95 p-0.5! rounded-lg"/>   */}
             RITCHIE
           </Motion.a>
 
