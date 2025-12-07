@@ -29,9 +29,7 @@ const SkillsCard = ({ skillCategory, index }) => {
           {skillCategory.skills.map((skill, idx) => (
             <Motion.div
               key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, delay: idx * 0.05 }}
+              
               viewport={{ once: true }}
               className="flex items-center justify-between p-3! rounded-xl bg-gray-50/50 dark:bg-gray-700/30 hover:bg-gray-100/70 dark:hover:bg-gray-700/50 transition-all duration-200 group/item"
             >

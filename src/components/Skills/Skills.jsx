@@ -39,10 +39,10 @@ const Skills = () => {
   return (
     <section 
       id="skills" 
-      className="relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden"
+      className="relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden bg-gradient-to-b from-gray-50 to-gray-200   dark:from-dark-200 dark:to-dark-100"
     >
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-transparent dark:from-gray-900/30 -z-10"></div>
+      <div className="absolute inset-0  -z-10"></div>
       
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -56,7 +56,7 @@ const Skills = () => {
           
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4!">
-            My <span className="bg-gradient-to-r from-primary-600 to-blue-500 bg-clip-text text-transparent">Skills</span>
+            My <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">Skills</span>
           </h2>
 
           <div className="inline-flex items-center gap-2! px-4! py-2! bg-primary-50 dark:bg-primary-900/20 rounded-full mb-4!">
@@ -76,7 +76,7 @@ const Skills = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`px-5! py-2.5! rounded-full text-sm font-medium transition-all duration-300 ${
                   activeFilter === filter.id
-                    ? 'bg-gradient-to-r from-primary-600 to-blue-500 text-white shadow-lg'
+                    ? ' bg-primary-600 dark:bg-primary-700 text-white shadow-lg'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-sm'
                 }`}
               >
