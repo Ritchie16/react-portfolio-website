@@ -45,7 +45,7 @@ const ProjectCard = ({ project, index }) => {
           {/* Featured Badge */}
           {project.featured && (
             <div className="absolute top-4 right-4">
-              <span className="px-3! py-1.5! bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-full text-xs font-medium shadow-lg">
+              <span className="px-3! py-1.5! bg-white dark:bg-gray-300 text-gray-700 dark:text-gray-800 rounded-full text-sm font-medium shadow-lg">
                 Featured
               </span>
             </div>
@@ -54,8 +54,8 @@ const ProjectCard = ({ project, index }) => {
           {/* Private Project Indicator */}
           {isPrivate && (
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <div className="p-4! bg-black/60 rounded-full backdrop-blur-sm">
-                <FaLock className="w-8 h-8 text-white" />
+              <div className="p-3! bg-black/60 rounded-full backdrop-blur-sm">
+                <FaLock className="w-6 h-6 text-red-300" />
               </div>
             </div>
           )}
@@ -68,9 +68,7 @@ const ProjectCard = ({ project, index }) => {
             <div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2!">
                 {project.name}
-                {isPrivate && (
-                  <FaLock className="inline-block ml-2 text-gray-400" size={14} />
-                )}
+                
               </h3>
               
               {/* Tools Tags */}
@@ -88,10 +86,13 @@ const ProjectCard = ({ project, index }) => {
             </div>
 
             {/* Public/Private Indicator */}
-            <div className="flex-shrink-0">
-              <div className={`w-3 h-3 rounded-full ${
-                isPrivate ? 'bg-gray-400' : 'bg-green-500 animate-pulse'
-              }`}></div>
+            <div className={`flex-shrink-0 px-2! py-1! rounded-2xl ${isPrivate ? " bg-red-100/20 dark:bg-gray-700": " bg-green-100/20 dark:bg-gray-700"} `}>
+              
+              {isPrivate ? (
+                    <p className="text-red-400">Private</p>
+                ) : (
+                    <p className="text-green-400">Public</p>
+                )}
             </div>
           </div>
 
@@ -117,7 +118,7 @@ const ProjectCard = ({ project, index }) => {
                   <span className="text-sm font-medium">Code</span>
                 </Motion.a>
               ) : (
-                <div className="flex items-center gap-2 px-4! py-2! bg-red-100/20 dark:bg-gray-700 text-red-400 dark:text-red-400 rounded-lg cursor-not-allowed">
+                <div className="flex items-center gap-2 px-4! py-2! bg-red-100/20 dark:bg-gray-700 text-gray-400 dark:text-gray-400 rounded-lg cursor-not-allowed">
                   <FaGithub />
                   <span className="text-sm font-medium ">Private</span>
                 </div>
@@ -145,7 +146,7 @@ const ProjectCard = ({ project, index }) => {
             </div>
 
             {/* Project Stats */}
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <div className="text-right">
                 <div className={`text-xs text-gray-500 dark:text-gray-400 ${isPrivate ? 'text-red-400' : 'text-green-500'}`}>
                   {isPrivate ? 'Private' : 'Public'}
@@ -154,7 +155,7 @@ const ProjectCard = ({ project, index }) => {
                   Project
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

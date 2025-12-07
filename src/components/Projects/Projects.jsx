@@ -34,12 +34,12 @@ const Projects = () => {
     }
   };
 
-  const stats = {
-    total: projects.length,
-    public: projects.filter(p => p.is_public).length,
-    featured: projects.filter(p => p.featured).length,
-    withDemo: projects.filter(p => p.live_demo !== null).length
-  };
+//   const stats = {
+//     total: projects.length,
+//     public: projects.filter(p => p.is_public).length,
+//     featured: projects.filter(p => p.featured).length,
+//     withDemo: projects.filter(p => p.live_demo !== null).length
+//   };
 
   return (
     <section id="projects" className="relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden">
@@ -59,22 +59,16 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16!"
         >
-          <div className="inline-flex items-center gap-2! px-4! py-2! bg-primary-50 dark:bg-primary-900/20 rounded-full mb-4!">
-            <span className="text-primary-600 dark:text-primary-400 font-medium text-sm">
-              Portfolio Showcase
-            </span>
-          </div>
+          
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4!">
             My <span className="bg-gradient-to-r from-primary-600 to-blue-500 bg-clip-text text-transparent">Projects</span>
           </h2>
           
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto! mb-8!">
-            A collection of my recent work, showcasing problem-solving skills and technical expertise
-          </p>
+          
 
           {/* Stats Bar */}
-          <Motion.div
+          {/* <Motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -96,7 +90,7 @@ const Projects = () => {
                 </div>
               </div>
             ))}
-          </Motion.div>
+          </Motion.div> */}
 
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-3! mb-12!">
