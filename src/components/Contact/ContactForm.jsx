@@ -146,7 +146,7 @@ const ContactForm = () => {
           className="space-y-8!"
         >
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4!">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4!">
               Let's Build Something <span className="text-primary-600 dark:text-primary-400">Amazing</span> Together
             </h2>
             
@@ -202,7 +202,7 @@ const ContactForm = () => {
           </div>
 
           {/* Location Info */}
-          <div className="p-4! bg-gray-50 dark:bg-gray-800 rounded-xl">
+          {/* <div className="p-4! bg-gray-50 dark:bg-gray-800 rounded-xl">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3!">
               📍 Based in Malawi
             </h4>
@@ -210,7 +210,7 @@ const ContactForm = () => {
               Currently studying ICT at Mzuzu University. Open to remote opportunities 
               and international collaborations.
             </p>
-          </div>
+          </div> */}
         </Motion.div>
 
         {/* Right Column: Contact Form */}
