@@ -19,7 +19,8 @@ import {
   FaLightbulb,       // Problem solving
   FaComments,         // Communication
   FaLaravel,          // Laravel
-  FaServer         // Server
+  FaServer,         // Server
+  FaLinux       // Linux
 } from 'react-icons/fa';
 import { 
   SiExpress,         // Express
@@ -39,6 +40,7 @@ import {
   SiNodedotjs,        // Node.js alternative
   SiJetpackcompose  ,  // Jetpack Compose
 } from 'react-icons/si';
+
 
 import { VscVscode } from "react-icons/vsc"; //vs code
 
@@ -124,7 +126,8 @@ const skills = [
   {
     category: "Additional Expertise",
     skills: [
-      { name: "Computer Maintenance", icon: <FaLaptopCode className="text-gray-500" /> }
+      { name: "Computer Maintenance", icon: <FaLaptopCode className="text-gray-500" /> },
+      { name: "Linux", icon: <FaLinux className="text-black" /> }
     ],
     categoryIcon: <FaLaptopCode className="text-gray-500" size={28} />,
     gradient: "from-gray-100 to-slate-100"
