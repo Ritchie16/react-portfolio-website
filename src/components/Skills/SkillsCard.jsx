@@ -12,7 +12,7 @@ const SkillsCard = ({ skillCategory, index }) => {
       whileHover={{ y: -5 }}
       className="h-full"
     >
-      <div className="h-full bg-white/80 dark:bg-dark-500 backdrop-blur-sm rounded-2xl p-6! shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700/50 hover:border-primary-300 dark:hover:border-primary-500 overflow-hidden group">
+      <div className="h-full bg-white/80 dark:bg-dark-500 backdrop-blur-sm rounded-2xl p-6! shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-white/20 hover:border-primary-300 dark:hover:border-primary-500 overflow-hidden group">
         {/* Category Header */}
         <div className="flex items-center gap-4 mb-6!">
           <div className={`relative p-3! rounded-xl bg-gradient-to-r ${skillCategory.gradient} group-hover:scale-110 transition-transform duration-300`}>
