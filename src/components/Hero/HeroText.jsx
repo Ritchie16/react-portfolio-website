@@ -1,20 +1,41 @@
 import { motion as Motion } from "framer-motion";
-import { FiArrowRight, FiDownload, FiCopy, FiCheck } from "react-icons/fi";
-import HeroSocialLinks from "./HeroSocialLinks";
-
+import { FiArrowRight, FiDownload } from "react-icons/fi";
+import { useState } from "react";
 
 const HeroText = () => {
   const buttonSizes = "text-sm md:text-md ";
+  const [isDownloading, setIsDownloading] = useState(false);
 
-  //this is similar to as writing initial and animate props on motion.div
-  //we can define multiple variants and use them on different motion elements
-  //this is useful for complex animations with multiple elements
-  //here we define variants for the entire text block
-  //and for individual items like h1, p, and buttons
-  //we can then use these variants on the respective motion elements
-  //to create a staggered animation effect
+  // Scroll to section smoothly
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+  };
 
-  //variants for the entire text block
+  // Handle CV download
+  const handleDownloadCV = (e) => {
+    e.preventDefault();
+    setIsDownloading(true);
+    
+    // Simulate download delay for better UX
+    setTimeout(() => {
+      // Create a temporary link element
+      const link = document.createElement('a');
+      link.href = '/Richard_Munthali_CV.pdf';
+      link.download = 'Richard_Munthali_FullStack_Developer_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      setIsDownloading(false);
+    }, 500);
+  };
+
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
@@ -59,32 +80,42 @@ const HeroText = () => {
 
       {/* === CTA Buttons === */}
       <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
-        <a
-          href="#contact"
-          /**items center for centering vertically and justify-center for centering items horizontally */
-          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes}  bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
+        <button
+          onClick={() => scrollToSection('contact')}
+          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes}  bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer`}
         >
           <FiArrowRight />
           Get In Touch
-        </a>
+        </button>
 
-        <a
-          href="#projects"
-          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-primary-600 hover:text-primary-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105`}
+        <button
+          onClick={() => scrollToSection('projects')}
+          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-primary-600 hover:text-primary-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer`}
         >
           <FiArrowRight />
           See My Projects
-        </a>
+        </button>
 
-        <a
-          href="/Richard_Munthali_CV.pdf"
-          download
-          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-3  rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105`}
+        <button
+          onClick={handleDownloadCV}
+          disabled={isDownloading}
+          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-3 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
         >
-          <FiDownload />
-          Download CV
-        </a>
+          {isDownloading ? (
+            <>
+              <div className="w-5 h-5 border-2 border-primary-600 border-t-transparent rounded-full animate-spin" />
+              Downloading...
+            </>
+          ) : (
+            <>
+              <FiDownload />
+              Download CV
+            </>
+          )}
+        </button>
       </div>
+
+      
     </Motion.div>
   );
 };
