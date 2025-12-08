@@ -1,42 +1,68 @@
-import { motion as Motion } from "framer-motion";
-import CombineEduCert from "./Edu+Cert";
-import PassionAndStack from "./PassionAndStack";
-import AboutLocation from "./AboutLocation";
+import EducationCard from './EducationCard';
+import CertificationsCard from './CertificationsCard';
+import LocationCard from './LocationCard';
+import { motion as Motion } from 'framer-motion';
 
-const AboutMe = () => {
+const About = () => {
   return (
-    <section
-      id="about"
-      className="flex flex-col items-center bg-gradient-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900/60 min-h-screen pt-15!"
-    >
-      {/** Container for the entire About Me section and its content has a relative to add top space*/}
-      <div className=" flex flex-col justify-between items-center gap-8 w-full max-w-6xl">
+    <section id="about" className="min-h-screen! py-20! bg-gradient-to-b from-gray-50 to-gray-200   dark:from-dark-200 dark:to-dark-100">
+      <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
         {/* Section Header */}
         <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center! mb-16!"
         >
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-b from-primary-600 to-gray-400 dark:from-primary-500 dark:to-blue-300 bg-clip-text text-transparent ">
-            About <span className="text-primary-700">Me</span>
+          <h2 className="text-3xl! md:text-4xl! font-bold! text-gray-900! dark:text-white! mb-4!">
+            Academic & Professional Profile
           </h2>
-          <div className="w-44 h-[2px] bg-gray-900/60 dark:bg-white/80 mx-auto"></div>
+          <div className="w-32! h-1! bg-gradient-to-r! from-primary-500! to-primary-700! mx-auto! rounded-full!" />
+          <p className="mt-6! text-lg! text-gray-600! dark:text-gray-400! max-w-3xl! mx-auto!">
+            Currently pursuing a Bachelor's in ICT at Mzuzu University while actively engaging in 
+            professional development through certifications and practical projects.
+          </p>
         </Motion.div>
 
-        {/* Education and Certifications Component */}
-        <div className="flex flex-col md:flex-row justify-between gap-y-5  ">
-          <PassionAndStack />
-          <CombineEduCert />
-        </div>
-      </div>
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-8!">
+          {/* Education & Certifications */}
+          <div className="space-y-8!">
+            <Motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <EducationCard />
+            </Motion.div>
 
-      <div className=" md:mt-80! lg:mt-8! lg:mb-6">
-        <AboutLocation />
+            <Motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <CertificationsCard />
+            </Motion.div>
+          </div>
+
+          {/* Location & Additional Info */}
+          <Motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+            className="lg:sticky! lg:top-24! h-fit!"
+          >
+            <LocationCard />
+          </Motion.div>
+        </div>
+
+
       </div>
     </section>
   );
 };
 
-export default AboutMe;
+export default About;
