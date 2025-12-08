@@ -1,3 +1,5 @@
+// src/constants/location.js
+
 export const LOCATION = {
   city: "Mzuzu",
   country: "Malawi",
