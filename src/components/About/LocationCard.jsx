@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaWhatsappSquare, FaClock, FaEnvelope, FaLinkedin } fro
 
 const LocationCard = () => {
   return (
-    <div className="bg-gradient-to-br! from-gray-50! to-white! dark:from-gray-800! dark:to-gray-900! rounded-xl! shadow-lg! p-6!">
+    <div className="bg-white/80 dark:bg-dark-500  rounded-xl! shadow-lg! p-6!">
       <div className="flex! items-center! gap-3! mb-6!">
         <div className="p-2! bg-primary-100! dark:bg-primary-900/30! rounded-lg!">
           <FaMapMarkerAlt className="w-6! h-6! text-primary-600! dark:text-primary-400!" />
@@ -13,7 +13,7 @@ const LocationCard = () => {
             Location & Availability
           </h3>
           <p className="text-sm! text-gray-600! dark:text-gray-400!">
-            Based in {LOCATION.city}, {LOCATION.country}
+            Based in {LOCATION.city}, {LOCATION.country} 🇲🇼
           </p>
         </div>
       </div>

@@ -40,7 +40,7 @@ const Services = () => {
     <AnimatePresence>
       <section
         id="services"
-        className="relative py-24! px-4! sm:px-6! lg:px-8! min-h-screen! w-full! overflow-hidden! bg-gradient-to-b from-gray-50 to-gray-200   dark:from-dark-200 dark:to-dark-100"
+        className="relative py-24! px-4! sm:px-6! lg:px-8! min-h-screen! w-full! overflow-hidden! bg-gradient-to-b from-gray-100 to-gray-200   dark:from-dark-200 dark:to-dark-100"
       >
         {/* Sophisticated Background */}
         <div className="absolute! inset-0!  -z-10!"></div>
@@ -64,7 +64,7 @@ const Services = () => {
             >
             
               
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4!">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4!">
             My <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">Services</span>
           </h2>
             </Motion.div>

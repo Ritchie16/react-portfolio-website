@@ -5,7 +5,7 @@ import { motion as Motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen! py-20! bg-gradient-to-b from-gray-50 to-gray-200   dark:from-dark-200 dark:to-dark-100">
+    <section id="about" className="min-h-screen! py-20! bg-gradient-to-b from-gray-100 to-gray-200   dark:from-dark-200 dark:to-dark-100">
       <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
         {/* Section Header */}
         <Motion.div

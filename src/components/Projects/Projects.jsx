@@ -42,7 +42,7 @@ const Projects = () => {
 //   };
 
   return (
-    <section id="projects" className="relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden bg-gradient-to-b from-gray-50 to-gray-200   dark:from-dark-200 dark:to-dark-100">
+    <section id="projects" className="relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200   dark:from-dark-200 dark:to-dark-100">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-transparent dark:from-gray-900/30 -z-10"></div>
       
@@ -61,7 +61,7 @@ const Projects = () => {
         >
           
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4!">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4!">
             My <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">Projects</span>
           </h2>
           

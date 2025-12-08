@@ -26,7 +26,7 @@
   --color-dark-200: #111a1f; /* Surface */
   --color-dark-300: #152025; /* Elevated surface */
   --color-dark-400: #1a262c; /* Cards */
-  --color-dark-500: #1f2c33; /* Inputs, menus */
+  --color-dark-500: #1f2937; /* Inputs, menus, best for cards(Tailwind gray-800) */
   --color-dark-600: #24333a; /* Hover states */
   --color-dark-700: #293a42; /* Active states */
   --color-dark-800: #2e414a; /* Borders */

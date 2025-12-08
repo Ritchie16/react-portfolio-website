@@ -8,7 +8,7 @@ const EducationCard = () => {
   };
 
   return (
-    <div className="bg-white! dark:bg-gray-800! rounded-xl! shadow-lg! p-6! transition-all! duration-300! hover:shadow-xl!">
+    <div className="bg-white/80 dark:bg-dark-500  rounded-xl! shadow-lg! p-6! transition-all! duration-300! hover:shadow-xl!">
       <div className="flex! items-center! justify-between! mb-6!">
         <h3 className="text-xl! font-bold! text-gray-900! dark:text-white!">
           Academic Journey
