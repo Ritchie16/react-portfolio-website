@@ -55,7 +55,7 @@ const ServiceCard = ({ service, index }) => {
       className="relative! group! h-full!"
     >
       {/* Card Container with Professional Polish */}
-      <div className="h-full! flex! flex-col! bg-white/95! dark:bg-gray-800/95! backdrop-blur-sm! rounded-2xl! shadow-xl! hover:shadow-2xl! transition-all! duration-500! border! border-gray-200/80! dark:border-gray-700/80! overflow-hidden!">
+      <div className="h-full! flex! flex-col! bg-white/80 dark:bg-gray-800/95! backdrop-blur-sm! rounded-2xl! shadow-xl! hover:shadow-2xl! transition-all! duration-500! border! border-gray-200/80! dark:border-gray-700/80! overflow-hidden!">
         
         {/* Premium Top Accent */}
         <div className="h-0.5 bg-gradient-to-r from-primary-500 via-primary-600 opacity-20"></div>
