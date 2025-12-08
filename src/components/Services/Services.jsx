@@ -40,21 +40,13 @@ const Services = () => {
     <AnimatePresence>
       <section
         id="services"
-        className="relative py-24! px-4! sm:px-6! lg:px-8! min-h-screen! w-full! overflow-hidden! bg-gradient-to-b from-gray-100 to-gray-200   dark:from-dark-200 dark:to-dark-100"
+        className="relative py-20! px-4! sm:px-6! lg:px-8! min-h-screen! w-full! overflow-hidden! bg-gradient-to-b from-gray-100 to-gray-200   dark:from-dark-200 dark:to-dark-100"
       >
-        {/* Sophisticated Background */}
-        <div className="absolute! inset-0!  -z-10!"></div>
         
-        {/* Subtle Grid Pattern */}
-        <div className="absolute! inset-0! opacity-5! dark:opacity-10! bg-grid-gray-900/[0.04]! dark:bg-grid-gray-100/[0.05]! -z-5! bg-[size:20px_20px]!"></div>
         
-        {/* Gradient Accents */}
-        <div className="absolute! -top-40! -left-40! w-80! h-80! bg-primary-500/5! rounded-full! blur-3xl! -z-5!"></div>
-        <div className="absolute! -bottom-40! -right-40! w-80! h-80! bg-blue-500/5! rounded-full! blur-3xl! -z-5!"></div>
-
         <div className="max-w-7xl! mx-auto!">
           {/* Section Header - Professional Edition */}
-          <div className="text-center! mb-20!">
+          <div className="text-center! mb-8!">
             <Motion.div
               variants={titleVariants}
               initial="hidden"
@@ -64,7 +56,7 @@ const Services = () => {
             >
             
               
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4!">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-0!">
             My <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">Services</span>
           </h2>
             </Motion.div>
