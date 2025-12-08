@@ -32,7 +32,7 @@ const projects = [
     id: 7,
     name: "Aunt Joy's Restraurant Website",
     description: "A modern website for managing and ordering of meals as well as business analytics.",
-    image: "/bg1.jpeg",
+    image: "/proj_aunt-joy.jpeg",
     tools: ["ReactJS" , "PHP", "Framer Motion", "JavaScript", "MySQL",  "TailwindCSS", "Education"],
     is_public: false,
     github_url: null,
