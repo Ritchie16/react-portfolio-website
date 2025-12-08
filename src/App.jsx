@@ -7,7 +7,7 @@ import About from "./components/About";
 import Skills from "./components/Skills/Skills";
 import Services from "./components/Services";
 import Projects from "./components/Projects/Projects";
-// import Contact from "./components/Contact/Contact";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -17,15 +17,10 @@ function App() {
         <main>
           <Hero />
           <About />
-
-          {/*
-          
-          <Contact />
-          */}
-
           <Services />
           <Skills />
           <Projects />
+          <Contact />
         </main>
       </div>
     </ThemeProvider>
