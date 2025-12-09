@@ -124,7 +124,7 @@ const Header = () => {
           <Motion.a
             href="#home"
             onClick={(e) => handleSmoothScroll("#home", e)}
-            className="flex items-center justify-center gap-x-2 w-20 md:w-40 text-center text-lg md:text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-300 dark:from-primary-500 dark:to-primary-300 bg-clip-text text-transparent cursor-pointer"
+            className="flex items-center justify-between md:justify-center gap-x-2 w-20 md:w-40 text-center text-lg md:text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-300 dark:from-primary-500 dark:to-primary-300 bg-clip-text text-transparent cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -212,7 +212,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`transition-colors duration-300 font-medium text-md px-2 py-2 rounded-md cursor-pointer ${
+                className={`transition-colors duration-300 font-medium text-md px-2! py-2! rounded-md cursor-pointer ${
                   activeSection === item.id
                     ? "text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30"
                     : "text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50"
@@ -227,21 +227,21 @@ const Header = () => {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
-              className="ml-2 w-12 pr-5"
+              className="ml-2! w-12 pr-5!"
             >
               <ThemeToggleButton />
             </Motion.div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center justify-between gap-x-3 w-15">
+          <div className="flex md:hidden items-center justify-center gap-x-3 w-25 ">
             <ThemeToggleButton />
             <Motion.button
               onClick={(e) => {
                 e.stopPropagation();
                 setIsMenuOpen(!isMenuOpen);
               }}
-              className="rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+              className=" rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle menu"
@@ -269,6 +269,8 @@ const Header = () => {
                 )}
               </svg>
             </Motion.button>
+
+          
           </div>
         </div>
 
@@ -280,7 +282,7 @@ const Header = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden border-t border-gray-200 dark:border-gray-700 mt-2"
+              className="md:hidden border-t border-gray-200 dark:border-gray-700 mt-2!"
             >
               <div className="py-3 space-y-1">
                 {navItems.map((item, index) => (
@@ -288,7 +290,7 @@ const Header = () => {
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className={`block py-3 px-6 transition-all duration-200 font-medium text-base border-l-4 cursor-pointer ${
+                    className={`block py-3! px-6! transition-all duration-200 font-medium text-base border-l-4 cursor-pointer ${
                       activeSection === item.id
                         ? "text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 border-primary-600 dark:border-primary-400"
                         : "text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800 border-transparent hover:border-primary-600 dark:hover:border-primary-400"

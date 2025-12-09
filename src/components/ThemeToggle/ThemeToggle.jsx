@@ -10,7 +10,7 @@ const ThemeToggleButton = () => {
     //button to toggle theme
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all duration-300 hover:scale-110"
+      className="p-2! rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all duration-300 hover:scale-110"
       aria-label="Toggle theme"
     >
       {isDark ? <FiSun size={20} /> : <FiMoon size={20} />}
