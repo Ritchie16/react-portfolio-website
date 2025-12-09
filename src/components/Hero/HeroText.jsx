@@ -72,7 +72,7 @@ const HeroText = () => {
         </span>
       </Motion.p>
 
-      <Motion.p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
+      <Motion.p className="text-md text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
         I create beautiful, responsive web applications using modern
         technologies. Passionate about clean code, user experience, and turning
         complex problems into simple, elegant solutions.
@@ -90,7 +90,7 @@ const HeroText = () => {
 
         <button
           onClick={() => scrollToSection('projects')}
-          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-primary-600 hover:text-primary-600 px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer`}
+          className={`h-10 w-1/1 md:w-40 lg:45 xl:w-50 ${buttonSizes} border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-primary-600 hover:text-primary-600 px-4! py-3! rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer`}
         >
           <FiArrowRight />
           See My Projects
