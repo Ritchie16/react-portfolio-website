@@ -2,6 +2,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"; // Optional but recommended
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About";
@@ -34,6 +36,10 @@ function App() {
             } />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          
+          {/* Analytics and Speed Insight */}
+          <Analytics />
+          <SpeedInsights />
         </div>
       </ThemeProvider>
     </Router>
