@@ -1,5 +1,6 @@
 // src/App.jsx
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -9,25 +10,33 @@ import Services from "./components/Services";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer";
+import NotFound from "./pages/Error/NotFound";
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Services />
-          <Skills />
-          <Projects />
-          <Contact />
-        </main>
-
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider>
+        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+          <Header />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <main>
+                  <Hero />
+                  <About />
+                  <Services />
+                  <Skills />
+                  <Projects />
+                  <Contact />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
-
 export default App;
