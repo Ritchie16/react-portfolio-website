@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <!-- Fix: Remove "public/" from favicon path -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- lines for SEO -->
     <title>Richard Munthali | Malawian Software Developer</title>
     <meta
       name="description"
-      content="Portfolio of Richard Munthali - ICT Student & Software Developer from Malawi"
+      content="Portfolio of Richard Munthali - ICT Student & Software Developer from Malawi specializing in modern web technologies."
     />
     <meta name="author" content="Richard Munthali" />
 
@@ -19,7 +21,24 @@
       content="Malawian Software Developer & ICT Student"
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://richardmunthali.vercel.app" />
+    <!-- Add this line for the image -->
+    <meta
+      property="og:image"
+      content="https://richardmunthali.vercel.app/og-image.png"
+    />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Richard Munthali Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Malawian Software Developer & ICT Student"
+    />
+    <meta
+      name="twitter:image"
+      content="https://richardmunthali.vercel.app/og-image.png"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +46,15 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     />
+
+    <!-- Add favicon alternatives -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://richardmunthali.vercel.app" />
   </head>
   <body>
     <div id="root"></div>
