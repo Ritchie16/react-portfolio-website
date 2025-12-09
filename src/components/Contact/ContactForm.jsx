@@ -222,33 +222,7 @@ const ContactForm = () => {
         >
           {/* Form Card */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8! md:p-10! border border-gray-100 dark:border-gray-700/50">
-            {/* Success/Error Message */}
-            {submitStatus.success !== null && (
-              <Motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className={`mb-6! p-4! rounded-xl ${
-                  submitStatus.type === 'success' 
-                    ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800/30' 
-                    : 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/30'
-                }`}
-              >
-                <div className="flex items-start gap-3!">
-                  {submitStatus.type === 'success' ? (
-                    <FiCheck className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5" />
-                  ) : (
-                    <FiAlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5" />
-                  )}
-                  <p className={`text-sm ${
-                    submitStatus.type === 'success' 
-                      ? 'text-green-700 dark:text-green-400' 
-                      : 'text-red-700 dark:text-red-400'
-                  }`}>
-                    {submitStatus.message}
-                  </p>
-                </div>
-              </Motion.div>
-            )}
+            
 
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2!">
               Send me a message
@@ -384,6 +358,34 @@ const ContactForm = () => {
                   </p>
                 )}
               </div>
+
+              {/* Success/Error Message */}
+            {submitStatus.success !== null && (
+              <Motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`mb-6! p-4! rounded-xl ${
+                  submitStatus.type === 'success' 
+                    ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800/30' 
+                    : 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/30'
+                }`}
+              >
+                <div className="flex items-start gap-3!">
+                  {submitStatus.type === 'success' ? (
+                    <FiCheck className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5" />
+                  ) : (
+                    <FiAlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5" />
+                  )}
+                  <p className={`text-sm ${
+                    submitStatus.type === 'success' 
+                      ? 'text-green-700 dark:text-green-400' 
+                      : 'text-red-700 dark:text-red-400'
+                  }`}>
+                    {submitStatus.message}
+                  </p>
+                </div>
+              </Motion.div>
+            )}
 
               {/* Submit Button */}
               <Motion.button
