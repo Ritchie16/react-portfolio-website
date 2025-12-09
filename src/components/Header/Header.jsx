@@ -1,6 +1,7 @@
 // src/components/Header/Header.jsx
 import React, { useState, useEffect } from "react";
 import { motion as Motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import ThemeToggleButton from "../ThemeToggle/ThemeToggle";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 
@@ -8,61 +9,80 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  
+  // Add these hooks
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Handle scroll effect for header
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Update active section based on scroll position
-      const sections = ["home", "about", "services",  "skills", "projects", "contact"];
+      // Only update active section if we're on home page
+      if (location.pathname === "/") {
+        const sections = ["home", "about", "services", "skills", "projects", "contact"];
+        const current = sections.find((section) => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top <= 100 && rect.bottom >= 100;
+          }
+          return false;
+        });
 
-      // Find the section currently in view so that we can highlight it in the nav
-      //.find used to search through an array and return the first element that matches a condition you define.
-      const current = sections.find((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          //Tells us where that section is on the screen — its distance from the top, bottom, etc.
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-
-      //so current is the matched element
-      if (current) setActiveSection(current);
+        if (current) setActiveSection(current);
+      }
     };
 
-    //add the event listener to the screen - executes the function always on scroll
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
-  // Smooth scroll function
+  // Updated smooth scroll function
   const handleSmoothScroll = (href, event) => {
-    //this helps to prevent the default behavior of the anchor tag, which is to jump directly to the section without any animation.
-    //By calling event.preventDefault(), we stop that default jump and instead implement our own smooth scrolling behavior.
-    //So, when a user clicks on a navigation link, they experience a smooth transition to the target section rather than an abrupt jump.
-    //This enhances the user experience by providing a visually appealing and less jarring navigation effect.
-    //In summary, event.preventDefault() is used here to enable smooth scrolling by preventing the default jump-to-section behavior of anchor tags.
     event.preventDefault();
-
+    
     // Extract the target ID from the href (removing the '#' character)
     const targetId = href.replace("#", "");
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-      setActiveSection(targetId);
-      //this is used because when a user clicks on a navigation link in the mobile menu, we want the menu to close automatically after the click.
-      //If we don't close the menu, it would remain open, potentially obstructing the view of the content the user just navigated to.
-      //By calling setIsMenuOpen(false), we ensure that the mobile menu closes after a navigation link is clicked, providing a cleaner and more user-friendly experience.
-      setIsMenuOpen(false);
+    
+    // If we're not on the home page, navigate to home page first
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: targetId } });
+    } else {
+      // We're already on home page, scroll to section
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        setActiveSection(targetId);
+        setIsMenuOpen(false);
+      }
     }
   };
+
+  // Handle scroll to section after navigation
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const targetId = location.state.scrollTo;
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        setTimeout(() => {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          setActiveSection(targetId);
+          
+          // Clear the state to prevent repeated scrolling on refresh
+          window.history.replaceState({}, document.title);
+        }, 100); // Small delay to ensure DOM is ready
+      }
+    }
+  }, [location.state]);
 
   const navItems = [
     { name: "Home", href: "#home", id: "home" },
@@ -79,10 +99,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      //event.target gives us the specific element that was clicked.
-      //The closest("nav") method checks if the clicked element is inside a <nav> element.
-      //If the clicked element is not inside a <nav> (i.e., closest("nav") returns null), and the menu is currently open (isMenuOpen is true),
-      //then we close the menu by setting isMenuOpen to false.
       if (isMenuOpen && !event.target.closest("nav")) {
         setIsMenuOpen(false);
       }
@@ -112,7 +128,6 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-             {/* <LiaLaptopCodeSolid size={30} className=" dark:bg-gray-200/20  text-primary-600 dark:text-white/95 p-0.5! rounded-lg"/>   */}
             RITCHIE
           </Motion.a>
 
@@ -254,17 +269,10 @@ const Header = () => {
                 )}
               </svg>
             </Motion.button>
-
-            <div className="w-7">
-              {/* This empty div is to help with spacing and alignment of the menu button */}
-            </div>
           </div>
         </div>
 
-        {/**Mobile Navigation
-         * the main role of this code is to display a mobile-friendly navigation menu that appears
-         * when a user clicks on a menu button (often represented by a hamburger icon) on smaller screens.
-         */}
+        {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
             <Motion.div
