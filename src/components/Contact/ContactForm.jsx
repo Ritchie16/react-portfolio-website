@@ -101,7 +101,7 @@ const ContactForm = () => {
       label: "Email Directly",
       value: "richardmunthali016@gmail.com",
       href: "mailto:richardmunthali016@gmail.com",
-      color: "bg-primary-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-50/10",
+      color: "bg-primary-50 dark:bg-primary-900/20 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-50/10",
       action: "copy"
     },
     {
