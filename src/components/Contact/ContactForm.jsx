@@ -65,7 +65,7 @@ const ContactForm = () => {
       if (result.success) {
         setSubmitStatus({
           success: true,
-          message: '✨ Your message has been sent successfully! I\'ll respond within 24 hours.',
+          message: 'Your message has been sent successfully! I\'ll respond within 24 hours.',
           type: 'success'
         });
         
@@ -159,7 +159,7 @@ const ContactForm = () => {
                 </h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300">
-                I typically respond within <span className="font-semibold text-primary-600 dark:text-primary-400">24 hours</span> during weekdays. 
+                I typically respond within <span className="font-semibold text-primary-600 dark:text-primary-400">24 hours</span>. 
                 For urgent matters, consider reaching out via WhatsApp.
               </p>
             </div>
@@ -272,7 +272,7 @@ const ContactForm = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Full Name"
                   className={`w-full px-4! py-2! rounded-xl border ${
                     errors.name 
                       ? 'border-red-300 dark:border-red-700 bg-red-50/50 dark:bg-red-900/10' 
@@ -301,7 +301,7 @@ const ContactForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="john@example.com"
+                  placeholder="name@example.com"
                   className={`w-full px-4! py-2! rounded-xl border ${
                     errors.email 
                       ? 'border-red-300 dark:border-red-700 bg-red-50/50 dark:bg-red-900/10' 
