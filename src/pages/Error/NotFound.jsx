@@ -34,7 +34,7 @@ const NotFound = () => {
         <div className="space-y-3! mb-10!">
           <button
             onClick={handleGoHome}
-            className="w-full! py-3! bg-gray-900! dark:bg-white! text-white! dark:text-gray-900! font-medium! rounded-lg! hover:bg-gray-800! dark:hover:bg-gray-100! transition-colors! duration-200! text-sm! tracking-wide!"
+            className="w-full! py-3! bg-gray-700! dark:bg-white/80! text-white! dark:text-primary-900! font-medium! rounded-lg! hover:bg-primary-900! dark:hover:bg-gray-100! transition-colors! duration-200! text-sm! tracking-wide!"
           >
             Return to homepage
           </button>
