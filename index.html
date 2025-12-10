@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
-    <title>Richard Munthali | Third-Year ICT Student & Developer from Malawi</title>
+    <title>
+      Richard Munthali | Third-Year ICT Student & Developer from Malawi
+    </title>
     <meta
       name="title"
       content="Richard Munthali | Third-Year ICT Student & Developer from Malawi"
@@ -28,7 +30,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Open Graph - MUST COME BEFORE TWITTER -->
     <meta
@@ -50,10 +51,6 @@
       content="https://richardmunthali.vercel.app/og-image.jpg"
     />
     <meta
-      property="og:image:url"
-      content="https://richardmunthali.vercel.app/og-image.jpg"
-    />
-    <meta
       property="og:image:secure_url"
       content="https://richardmunthali.vercel.app/og-image.jpg"
     />
@@ -65,7 +62,7 @@
       content="Richard Munthali - ICT Student & Software Developer Portfolio"
     />
 
-    <!-- Twitter Card - MUST COME AFTER OPEN GRAPH -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Ritchie16" />
     <meta name="twitter:creator" content="@Ritchie16" />
@@ -86,7 +83,7 @@
       content="Richard Munthali - ICT Student & Software Developer Portfolio"
     />
 
-    <!-- Additional Meta Tags for WhatsApp -->
+    <!-- Additional WhatsApp-specific tags -->
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -101,7 +98,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     />
 
-    <!-- Updated Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -116,7 +113,18 @@
           "url": "https://mzuni.ac.mw",
           "description": "Currently pursuing a Bachelor of Science in Information and Communication Technology (Third Year)"
         },
-        "knowsAbout": ["Web Development", "Software Engineering", "UI/UX Design", "React", "Node.js", "JavaScript", "MongoDB", "TypeScript", "PHP", "MySQL", "etc."],
+        "knowsAbout": [
+          "Web Development",
+          "Software Engineering",
+          "UI/UX Design",
+          "React",
+          "Node.js",
+          "JavaScript",
+          "MongoDB",
+          "TypeScript",
+          "PHP",
+          "MySQL"
+        ],
         "sameAs": [
           "https://github.com/Ritchie16",
           "https://linkedin.com/in/richard-munthali-692880305"
@@ -129,9 +137,108 @@
         "award": "Pursuing BSc in ICT"
       }
     </script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 1200px;
+        height: 630px;
+        background: linear-gradient(135deg, #0d1418 0%, #1f2937 100%);
+        font-family: "Inter", sans-serif;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .container {
+        max-width: 900px;
+        padding: 60px;
+      }
+      h1 {
+        font-size: 56px;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        background: linear-gradient(90deg, #1dbd6d, #3aca81);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      h2 {
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0 0 15px 0;
+        color: #f0f4f2;
+      }
+      .student-info {
+        font-size: 28px;
+        color: #c8d3cd;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .university {
+        font-size: 26px;
+        color: #3aca81;
+        margin-bottom: 25px;
+        font-weight: 500;
+      }
+      .specialization {
+        font-size: 24px;
+        color: #8c9992;
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+      .location {
+        font-size: 22px;
+        color: #3aca81;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+      }
+      .url {
+        font-size: 20px;
+        color: #8c9992;
+        margin-top: 25px;
+        font-family: monospace;
+        letter-spacing: 1px;
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(29, 189, 109, 0.1);
+        border: 2px solid #1dbd6d;
+        border-radius: 20px;
+        padding: 6px 16px;
+        font-size: 22px;
+        margin: 10px 0;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="container">
+      <h1>Richard Munthali</h1>
+      <div class="badge">Third-Year ICT Student</div>
+      <h2>Aspiring Full Stack Developer</h2>
+      <div class="student-info">
+        <span>🎓</span>
+        <span>Pursuing BSc in Information & Communication Technology</span>
+      </div>
+      <div class="university">Mzuzu University</div>
+      <div class="specialization">
+        Specializing in Web Development & Software Engineering
+      </div>
+      <div class="location">
+        <span>🇲🇼</span>
+        <span>Based in Malawi | Open to Opportunities</span>
+      </div>
+      <div class="url">richardmunthali.vercel.app</div>
+    </div>
   </body>
 </html>
