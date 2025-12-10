@@ -132,7 +132,7 @@ const Header = () => {
           </Motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center gap-10">
+          <div className="hidden xl:flex items-center gap-7">
             {navItems.map((item) => (
               <Motion.a
                 key={item.name}
