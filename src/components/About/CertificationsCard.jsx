@@ -33,7 +33,7 @@ const CertificationsCard = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
-        <h3 className="text-xl! font-bold! text-gray-900! dark:text-white!">
+        <h3 className="text-xl! font-bold! text-gray-900! dark:text-gray-100!">
           Certifications & Achievements
         </h3>
       </div>
@@ -45,7 +45,7 @@ const CertificationsCard = () => {
             className={`pb-6! ${!cert.date.includes('Progress') ? 'border-b! border-gray-200! dark:border-gray-700!' : ''}`}
           >
             <div className="flex! justify-between! items-start! mb-2!">
-              <h4 className="font-semibold! text-gray-900! dark:text-white!">
+              <h4 className="font-semibold! text-gray-900! dark:text-gray-200!">
                 {cert.name}
               </h4>
               <span className={`px-2! py-1! text-xs! rounded-full! ${

@@ -14,7 +14,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center! mb-16!"
         >
-          <h2 className="text-3xl! md:text-4xl! font-bold! text-gray-900! dark:text-white! mb-4!">
+          <h2 className="text-3xl! md:text-4xl! font-bold! text-gray-900! dark:text-gray-200! mb-4!">
             Academic & Professional Profile
           </h2>
           <div className="w-32! h-1! bg-gradient-to-r! from-primary-500! to-primary-700! mx-auto! rounded-full!" />

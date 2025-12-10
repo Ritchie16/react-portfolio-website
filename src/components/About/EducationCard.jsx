@@ -10,7 +10,7 @@ const EducationCard = () => {
   return (
     <div className="bg-white/80 dark:bg-dark-500  rounded-xl! shadow-lg! p-6! transition-all! duration-300! hover:shadow-xl!">
       <div className="flex! items-center! justify-between! mb-6!">
-        <h3 className="text-xl! font-bold! text-gray-900! dark:text-white!">
+        <h3 className="text-xl! font-bold! text-gray-900! dark:text-gray-100!">
           Academic Journey
         </h3>
         <span className="px-3! py-1! text-sm! font-medium! bg-primary-100! text-primary-700! dark:bg-primary-900/30! dark:text-primary-300! rounded-full!">
@@ -35,7 +35,7 @@ const EducationCard = () => {
       {/* Tertiary Education */}
       <div className="space-y-4!">
         <div className="pb-4! border-b! border-gray-200! dark:border-gray-700!">
-          <h4 className="font-semibold! text-gray-900! dark:text-white! mb-1!">
+          <h4 className="font-semibold! text-gray-900! dark:text-gray-300! mb-1!">
             {EDUCATION.degree}
           </h4>
           <p className="text-gray-600! dark:text-gray-300!">
@@ -70,7 +70,7 @@ const EducationCard = () => {
 
         {/* Secondary Education */}
         <div>
-          <h4 className="font-semibold! text-gray-900! dark:text-white! mb-1!">
+          <h4 className="font-semibold! text-gray-900! dark:text-gray-200! mb-1!">
             {SECONDARY_EDUCATION.certificate}
           </h4>
           <p className="text-gray-600! dark:text-gray-300!">

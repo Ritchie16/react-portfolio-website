@@ -9,7 +9,7 @@ const LocationCard = () => {
           <FaMapMarkerAlt className="w-6! h-6! text-primary-600! dark:text-primary-400!" />
         </div>
         <div>
-          <h3 className="text-xl! font-bold! text-gray-900! dark:text-white! tracking-tight!">
+          <h3 className="text-xl! font-bold! text-gray-900! dark:text-gray-200! tracking-tight!">
             Location & Availability
           </h3>
           <p className="text-sm! text-gray-600! dark:text-gray-400! mt-1!">
@@ -24,7 +24,7 @@ const LocationCard = () => {
           <div className="flex! items-center! gap-3! p-3! rounded-lg! bg-gray-50/50! dark:bg-gray-700/30! border! border-gray-100! dark:border-gray-600/30!">
             <FaMapMarkerAlt className="w-5! h-5! text-primary-600! dark:text-primary-400! flex-shrink-0!" />
             <div>
-              <p className="font-semibold! text-gray-900! dark:text-white! text-sm!">
+              <p className="font-semibold! text-gray-900! dark:text-gray-200! text-sm!">
                 {LOCATION.institution}
               </p>
               <p className="text-sm! text-gray-600! dark:text-gray-400! mt-0.5!">
@@ -36,7 +36,7 @@ const LocationCard = () => {
           <div className="flex! items-center! gap-3! p-3! rounded-lg! bg-gradient-to-r! from-primary-50/50! to-blue-50/50! dark:from-primary-900/10! dark:to-blue-900/10! border! border-primary-100/30! dark:border-primary-900/30!">
             <FaClock className="w-5! h-5! text-primary-600! dark:text-primary-400! flex-shrink-0!" />
             <div>
-              <p className="font-semibold! text-gray-900! dark:text-white! text-sm!">
+              <p className="font-semibold! text-gray-900! dark:text-gray-200! text-sm!">
                 Availability
               </p>
               <p className="text-sm! text-primary-600! dark:text-primary-400! font-medium! mt-0.5!">
@@ -48,7 +48,7 @@ const LocationCard = () => {
 
         {/* Contact Information */}
         <div className="space-y-4!">
-          <h4 className="font-semibold! text-gray-900! dark:text-white! text-sm! tracking-wide!">
+          <h4 className="font-semibold! text-gray-900! dark:text-gray-200! text-sm! tracking-wide!">
             Preferred Contact Methods
           </h4>
           
