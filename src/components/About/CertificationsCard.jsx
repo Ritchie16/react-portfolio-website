@@ -58,7 +58,7 @@ const CertificationsCard = () => {
             </div>
 
             <p className="text-gray-600! dark:text-gray-300! mb-3!">
-              {cert.issuer} • {(cert.date)}
+              {cert.issuer} • {cert.date}
             </p>
 
             {cert.description && (
