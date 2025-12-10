@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaWhatsappSquare, FaClock, FaEnvelope, FaLinkedin } fro
 
 const LocationCard = () => {
   return (
-    <div className="bg-white/90! dark:bg-gray-800/90! backdrop-blur-sm! rounded-xl! shadow-xl! p-6! transition-all! duration-300! hover:shadow-2xl! border! border-gray-100/50! dark:border-gray-700/50!">
+    <div className="bg-white/90! dark:bg-gray-800/90!  rounded-xl! shadow-xl! p-6! transition-all! duration-300! hover:shadow-2xl! border! border-gray-100/50! dark:border-gray-700/50!">
       <div className="flex! items-center! gap-3! mb-6!">
         <div className="p-2! bg-gradient-to-br! from-primary-500/10! to-blue-500/10! dark:from-primary-900/20! dark:to-blue-900/20! rounded-lg!">
           <FaMapMarkerAlt className="w-6! h-6! text-primary-600! dark:text-primary-400!" />
@@ -97,11 +97,11 @@ const LocationCard = () => {
       </div>
 
       {/* Future Growth Note */}
-      <div className="mt-6! pt-6! border-t! border-gray-200/50! dark:border-gray-700/50!">
+      {/* <div className="mt-6! pt-6! border-t! border-gray-200/50! dark:border-gray-700/50!">
         <p className="text-sm! text-gray-600! dark:text-gray-400! italic!">
           Open to relocation opportunities and international collaborations upon graduation in 2027.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

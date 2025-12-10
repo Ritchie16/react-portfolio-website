@@ -39,7 +39,7 @@ const Skills = () => {
   return (
     <section 
       id="skills" 
-      className="relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200   dark:from-dark-200 dark:to-dark-100"
+      className="min-w-screen! w-full relative py-20! px-4! sm:px-6! lg:px-8! overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200   dark:from-dark-200 dark:to-dark-100"
     >
       {/* Background decoration */}
       <div className="absolute inset-0  -z-10"></div>

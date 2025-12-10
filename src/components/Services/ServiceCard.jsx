@@ -52,13 +52,13 @@ const ServiceCard = ({ service, index }) => {
       whileInView="visible"
       whileHover="hover"
       viewport={{ once: true, margin: "-50px" }}
-      className="relative! group! h-full!"
+      className="relative! group! h-full! "
     >
       {/* Card Container with Professional Polish */}
-      <div className="h-full! flex! flex-col! bg-white/80 dark:bg-dark-500 backdrop-blur-sm! rounded-2xl! shadow-xl! hover:shadow-2xl! transition-all! duration-500! border! border-gray-100 dark:border-white/20 overflow-hidden!">
+      <div className=" h-full! flex! flex-col! bg-white/80 dark:bg-dark-500  rounded-2xl! shadow-xl! hover:shadow-2xl! transition-all! duration-500! border! border-gray-100 dark:border-white/20 overflow-hidden!">
         
         {/* Premium Top Accent */}
-        <div className="h-0.5 bg-gradient-to-r from-primary-500 via-primary-600 opacity-20"></div>
+        {/* <div className="h-0.5 bg-gradient-to-r from-primary-500 via-primary-600 opacity-20"></div> */}
         
         {/* Service Title - Sophisticated Design */}
         <div className="px-8! pt-8! pb-6! text-center! border-b! border-gray-100/50! dark:border-gray-700/50! bg-gradient-to-b! from-white/50! to-transparent! dark:from-gray-800/50!">
@@ -66,9 +66,7 @@ const ServiceCard = ({ service, index }) => {
             variants={contentVariants}
             className="relative! inline-block!"
           >
-            {/* Title Decoration */}
-            <div className="absolute! -inset-2! bg-gradient-to-r! from-primary-500/5! to-blue-500/5! rounded-lg! blur! opacity-0! group-hover:opacity-100! transition-opacity! duration-500!"></div>
-            
+                        
             <h3 className="relative! text-2xl! font-bold! text-gray-900! dark:text-white! tracking-tight! leading-tight!">
               {service.title}
             </h3>
@@ -113,7 +111,7 @@ const ServiceCard = ({ service, index }) => {
                   >
                     {/* Premium Bullet Point */}
                     <div className="relative! flex-shrink-0! mt-1.5!">
-                      <div className="absolute! inset-0! bg-primary-500/20! rounded-full! blur-sm! group-hover/item:bg-primary-500/40! transition-colors! duration-300!"></div>
+                      <div className="absolute! inset-0! bg-primary-500/20! rounded-full! group-hover/item:bg-primary-500/40! transition-colors! duration-300!"></div>
                       <div className="relative! w-2! h-2! bg-gradient-to-br! from-primary-500! to-primary-600! rounded-full!"></div>
                     </div>
                     

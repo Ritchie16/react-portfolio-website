@@ -18,7 +18,7 @@ function AppContent() {
   
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen min-w-screen bg-white dark:bg-gray-900 transition-colors duration-300">
      <Header />
       <Routes>
         <Route path="/" element={

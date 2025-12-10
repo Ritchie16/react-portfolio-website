@@ -44,7 +44,7 @@ const Services = () => {
       >
         
         
-        <div className="max-w-7xl! mx-auto!">
+        <div className="max-w-7xl! mx-auto! ">
           {/* Section Header - Professional Edition */}
           <div className="text-center! mb-8!">
             <Motion.div
@@ -73,7 +73,7 @@ const Services = () => {
             className="relative!"
           >
           
-            <div className="grid! grid-cols-1! md:grid-cols-2! lg:grid-cols-3! gap-8! lg:gap-10! px-4! sm:px-6!">
+            <div className="grid! grid-cols-1! md:grid-cols-2! lg:grid-cols-3! gap-8! lg:gap-10! ">
               {services.map((service, index) => (
                 <div 
                   key={service.id} 
@@ -83,8 +83,8 @@ const Services = () => {
                   }}
                 >
                   {/* Card Glow Effect */}
-                  <div className="absolute! -inset-0.5! bg-gradient-to-r! from-primary-500/10! to-blue-500/10! rounded-2xl! blur! opacity-0! group-hover:opacity-100! transition-opacity! duration-500! -z-10!"></div>
-                  
+                  {/* <div className="absolute! -inset-0.5! bg-gradient-to-r! from-primary-500/10! to-blue-500/10! rounded-2xl!  group-hover:opacity-100! transition-opacity! duration-500! -z-10!"></div>
+                   */}
                   <ServiceCard 
                     service={service} 
                     index={index}

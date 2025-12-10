@@ -72,7 +72,7 @@ const HeroText = () => {
         </span>
       </Motion.p>
 
-      <Motion.p className="text-md text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
+      <Motion.p className="text-md text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed px-4! md:px-0!">
         I create beautiful, responsive web applications using modern
         technologies. Passionate about clean code, user experience, and turning
         complex problems into simple, elegant solutions.
