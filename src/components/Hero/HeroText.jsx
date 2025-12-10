@@ -96,6 +96,7 @@ const HeroText = () => {
           See My Projects
         </button>
 
+        {/**
         <button
           onClick={handleDownloadCV}
           disabled={isDownloading}
@@ -113,6 +114,8 @@ const HeroText = () => {
             </>
           )}
         </button>
+
+        **/}
       </div>
 
       
