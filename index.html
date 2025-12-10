@@ -1,45 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <!-- Fix: Remove "public/" from favicon path -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- lines for SEO -->
-    <title>Richard Munthali | Malawian Software Developer</title>
+    <!-- Primary Meta Tags -->
+    <title>Richard Munthali | Third-Year ICT Student & Developer from Malawi</title>
+    <meta
+      name="title"
+      content="Richard Munthali | Third-Year ICT Student & Developer from Malawi"
+    />
     <meta
       name="description"
-      content="Portfolio of Richard Munthali - ICT Student & Software Developer from Malawi specializing in modern web technologies."
+      content="Third-year ICT student at Mzuzu University & aspiring Full Stack Developer. Building modern web applications while pursuing a Bachelor's in ICT."
     />
     <meta name="author" content="Richard Munthali" />
+    <meta
+      name="keywords"
+      content="ICT student, Malawian developer, software engineering student, Mzuzu University, web developer, React, Node.js, undergraduate developer"
+    />
 
-    <!-- Open Graph tags for social media -->
-    <meta property="og:title" content="Richard Munthali Portfolio" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://richardmunthali.vercel.app" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph - MUST COME BEFORE TWITTER -->
+    <meta
+      property="og:title"
+      content="Richard Munthali | ICT Student & Developer"
+    />
     <meta
       property="og:description"
-      content="Malawian Software Developer & ICT Student"
+      content="Third-Year ICT Student at Mzuzu University | Aspiring Full Stack Developer | Building modern web applications"
     />
-    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://richardmunthali.vercel.app" />
-    <!-- Add this line for the image -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Richard Munthali Portfolio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Open Graph Image - ABSOLUTELY CRITICAL -->
     <meta
       property="og:image"
-      content="https://richardmunthali.vercel.app/og-image.png"
+      content="https://richardmunthali.vercel.app/og-image.jpg"
+    />
+    <meta
+      property="og:image:url"
+      content="https://richardmunthali.vercel.app/og-image.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://richardmunthali.vercel.app/og-image.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Richard Munthali - ICT Student & Software Developer Portfolio"
     />
 
-    <!-- Twitter Card -->
+    <!-- Twitter Card - MUST COME AFTER OPEN GRAPH -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Richard Munthali Portfolio" />
+    <meta name="twitter:site" content="@Ritchie16" />
+    <meta name="twitter:creator" content="@Ritchie16" />
+    <meta
+      name="twitter:title"
+      content="Richard Munthali | ICT Student & Developer"
+    />
     <meta
       name="twitter:description"
-      content="Malawian Software Developer & ICT Student"
+      content="Third-Year ICT Student at Mzuzu University | Aspiring Full Stack Developer"
     />
     <meta
       name="twitter:image"
-      content="https://richardmunthali.vercel.app/og-image.png"
+      content="https://richardmunthali.vercel.app/og-image.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Richard Munthali - ICT Student & Software Developer Portfolio"
     />
 
+    <!-- Additional Meta Tags for WhatsApp -->
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="theme-color" content="#1dbd6d" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,14 +101,34 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     />
 
-    <!-- Add favicon alternatives -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://richardmunthali.vercel.app" />
+    <!-- Updated Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Richard Munthali",
+        "url": "https://richardmunthali.vercel.app",
+        "image": "https://richardmunthali.vercel.app/og-image.jpg",
+        "jobTitle": "Aspiring Full Stack Developer",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Mzuzu University",
+          "url": "https://mzuni.ac.mw",
+          "description": "Currently pursuing a Bachelor of Science in Information and Communication Technology (Third Year)"
+        },
+        "knowsAbout": ["Web Development", "Software Engineering", "UI/UX Design", "React", "Node.js", "JavaScript", "MongoDB", "TypeScript", "PHP", "MySQL", "etc."],
+        "sameAs": [
+          "https://github.com/Ritchie16",
+          "https://linkedin.com/in/richard-munthali-692880305"
+        ],
+        "nationality": {
+          "@type": "Country",
+          "name": "Malawi"
+        },
+        "educationalLevel": "Third-Year Undergraduate",
+        "award": "Pursuing BSc in ICT"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

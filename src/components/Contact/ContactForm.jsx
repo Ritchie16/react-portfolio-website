@@ -306,7 +306,7 @@ const ContactForm = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="e.g. Project Inquiry / Collaboration"
+                  placeholder="e.g. Project Inquiry / Collaboration, e.t.c"
                   className={`w-full px-4! py-2! rounded-xl border ${
                     errors.subject 
                       ? 'border-red-300 dark:border-red-700 bg-red-50/50 dark:bg-red-900/10' 
