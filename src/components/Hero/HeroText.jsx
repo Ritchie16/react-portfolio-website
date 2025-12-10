@@ -47,7 +47,7 @@ const HeroText = () => {
       className=" lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start gap-6 "
     >
       {/** heading with gradient text on name */}
-      <Motion.h1 className=" text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+      <Motion.h1 className=" text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
         Hi     
         , I'm{" "}
         <span className="bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-700 dark:via-primary-300 dark:to-primary-400 bg-clip-text text-transparent">
